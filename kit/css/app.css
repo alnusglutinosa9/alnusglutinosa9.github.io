@@ -594,15 +594,23 @@ canvas {
     background-image: url("../img/pattern/pattern-bg.svg");
     background-size: 320px auto;
     background-position: top left;
-    background-repeat: round;
+    background-position: 0, 0;
     -webkit-animation: animatedBackground 1.5s ease-out;
             animation: animatedBackground 1.5s ease-out;
     opacity: 1;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
+    @media screen and (min-width: 1024px) {
+      .hero:before {
+        background-size: auto; } }
   @media screen and (min-width: 768px) {
     .hero {
       padding-top: 16px; } }
+  @media screen and (max-width: 1023px) and (orientation: landscape) {
+    .hero {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   @media screen and (min-width: 1024px) {
     .hero {
       -webkit-box-pack: center;
@@ -610,6 +618,11 @@ canvas {
               justify-content: center; } }
   .hero__container {
     z-index: 1; }
+    @media screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
+      .hero__container {
+        max-width: 55%;
+        margin-right: 0;
+        margin-left: 0; } }
     @media screen and (min-width: 1024px) {
       .hero__container {
         max-width: 49%;
@@ -661,6 +674,11 @@ canvas {
         font-size: 130px;
         line-height: 156px;
         text-align: left; } }
+  .hero__title-main {
+    -webkit-animation: buttonAnimation 0.7s cubic-bezier(0.17, 0.67, 0.72, 1.53);
+            animation: buttonAnimation 0.7s cubic-bezier(0.17, 0.67, 0.72, 1.53);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom; }
   .hero__title-small {
     display: block;
     font-family: 'Swis721', Arial, sans-serif;
@@ -711,6 +729,14 @@ canvas {
       .hero__nav-link {
         width: 152px;
         height: 152px; } }
+    @media screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
+      .hero__nav-link {
+        width: 130px;
+        height: 130px; } }
+    @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+      .hero__nav-link {
+        width: 100px;
+        height: 100px; } }
     @media screen and (min-width: 1024px) {
       .hero__nav-link {
         width: auto;
@@ -723,6 +749,9 @@ canvas {
       @media screen and (min-width: 768px) {
         .hero__nav-link:not(:last-child) {
           margin-right: 124px; } }
+      @media screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
+        .hero__nav-link:not(:last-child) {
+          margin-right: 24px; } }
       @media screen and (min-width: 1024px) {
         .hero__nav-link:not(:last-child) {
           margin-right: 0;
@@ -748,6 +777,18 @@ canvas {
                 transform: translate(-50%, 0%);
         width: 768px;
         height: 768px; } }
+    @media screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
+      .hero__canvas {
+        position: absolute;
+        top: 32%;
+        left: 76%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        z-index: 0;
+        width: 320px;
+        height: 320px;
+        -o-object-fit: contain;
+           object-fit: contain; } }
     @media screen and (min-width: 1024px) {
       .hero__canvas {
         width: 800px;
@@ -799,18 +840,18 @@ canvas {
 
 @-webkit-keyframes animatedBackground {
   from {
-    background-position: 10px 100px;
+    background-position: 0, 0;
     opacity: 0; }
   to {
-    background-position: 0, 0;
+    background-position: 20px 20px;
     opacity: 1; } }
 
 @keyframes animatedBackground {
   from {
-    background-position: 10px 100px;
+    background-position: 0, 0;
     opacity: 0; }
   to {
-    background-position: 0, 0;
+    background-position: 20px 20px;
     opacity: 1; } }
 
 .Button-wrapper {
@@ -876,7 +917,7 @@ canvas {
   .logo:hover {
     cursor: pointer; }
     .logo:hover svg .eye {
-      fill: #fd74f8; }
+      fill: #30D4F9; }
   .logo__img {
     -o-object-fit: contain;
        object-fit: contain;
@@ -944,7 +985,7 @@ canvas {
         width: 30px;
         height: 30px; } }
     .social-list__link:hover svg {
-      color: #30D4F9; }
+      color: rgba(255, 255, 255, 0.5); }
     .social-list__link svg {
       -webkit-transition: color 0.3s ease-in;
       transition: color 0.3s ease-in; }
@@ -975,7 +1016,7 @@ canvas {
         font-size: 16px;
         line-height: 19px; } }
     .language-list__link:hover {
-      color: #30D4F9;
+      color: rgba(255, 255, 255, 0.5);
       cursor: pointer; }
     .language-list__link.is-active {
       color: rgba(255, 255, 255, 0.5); }
@@ -984,7 +1025,13 @@ canvas {
   position: relative;
   padding: 7px;
   -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms; }
+  transition: all ease-in-out 300ms;
+  -webkit-animation: buttonAnimation 0.7s cubic-bezier(0.17, 0.67, 0.72, 1.53);
+          animation: buttonAnimation 0.7s cubic-bezier(0.17, 0.67, 0.72, 1.53);
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom; }
   @media screen and (min-width: 768px) {
     .btn-round {
       padding: 11px; } }
@@ -999,13 +1046,28 @@ canvas {
       padding: 0; } }
   .btn-round:hover {
     z-index: 9; }
+    .btn-round:hover .btn-round__wrap {
+      background-color: #2797FF; }
+      .btn-round:hover .btn-round__wrap:before {
+        opacity: 0; }
+      .btn-round:hover .btn-round__wrap:after {
+        -webkit-animation-name: 'play_up';
+                animation-name: 'play_up';
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); }
     @media screen and (min-width: 1024px) {
       .btn-round:hover .btn-round__letter {
         display: inline-block;
         -webkit-animation: shrinkjumpLetter 1s ease-out;
                 animation: shrinkjumpLetter 1s ease-out;
         -webkit-transform-origin: bottom center;
-                transform-origin: bottom center; } }
+                transform-origin: bottom center; }
+      .btn-round:hover .btn-round__wrap {
+        background-image: linear-gradient(178deg, rgba(255, 255, 255, 0.3) calc(100% - 99px) 10%, transparent 12%, transparent 0%); } }
   .btn-round__wrap {
     position: relative;
     display: -webkit-box;
@@ -1027,7 +1089,9 @@ canvas {
     background-color: #2C7ECB;
     -webkit-box-shadow: 2px 2px 0px #004485;
             box-shadow: 2px 2px 0px #004485;
-    border-radius: 50%; }
+    border-radius: 50%;
+    -webkit-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out; }
     @media screen and (min-width: 768px) {
       .btn-round__wrap {
         font-size: 36px;
@@ -1040,7 +1104,7 @@ canvas {
         font-size: 36px;
         line-height: 43px;
         border-radius: 0;
-        background-image: linear-gradient(178deg, rgba(255, 255, 255, 0.3) calc(100% - 99px) 10%, transparent 12%, transparent 0%); } }
+        background-image: linear-gradient(178deg, rgba(255, 255, 255, 0.2) calc(100% - 99px) 10%, transparent 12%, transparent 0%); } }
     @media screen and (min-width: 1360px) {
       .btn-round__wrap {
         width: 350px;
@@ -1055,7 +1119,9 @@ canvas {
       width: calc(100% + 14px);
       height: calc(100% + 14px);
       border: 1px solid #2C7ECB;
-      border-radius: inherit; }
+      border-radius: inherit;
+      -webkit-transition: all ease-in-out 300ms;
+      transition: all ease-in-out 300ms; }
       @media screen and (min-width: 1024px) {
         .btn-round__wrap::after {
           display: none; } }
@@ -1079,15 +1145,16 @@ canvas {
     -webkit-animation: buttonAnimation 0.7s cubic-bezier(0.17, 0.67, 0.72, 1.53);
             animation: buttonAnimation 0.7s cubic-bezier(0.17, 0.67, 0.72, 1.53);
     -webkit-transform-origin: center bottom;
-            transform-origin: center bottom; }
+            transform-origin: center bottom;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
     @media screen and (min-width: 1024px) {
       .btn-round--important .btn-round__wrap {
         width: 326px;
         height: 66px;
         font-weight: 900;
         font-size: 40px;
-        line-height: 48px;
-        background-color: #2797FF; } }
+        line-height: 48px; } }
     @media screen and (min-width: 1360px) {
       .btn-round--important .btn-round__wrap {
         width: 388px;
@@ -1154,6 +1221,30 @@ canvas {
   90%, 100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1); } }
+
+@-webkit-keyframes play_up {
+  0% {
+    border-color: rgba(39, 151, 255, 0.85);
+    border-width: 3px;
+    -webkit-box-shadow: 0 0 rgba(39, 151, 255, 0.46);
+            box-shadow: 0 0 rgba(39, 151, 255, 0.46); }
+  to {
+    border-color: rgba(39, 151, 255, 0);
+    border-width: 0px;
+    -webkit-box-shadow: 0 0 0 8px rgba(39, 151, 255, 0);
+            box-shadow: 0 0 0 8px rgba(39, 151, 255, 0); } }
+
+@keyframes play_up {
+  0% {
+    border-color: rgba(39, 151, 255, 0.85);
+    border-width: 3px;
+    -webkit-box-shadow: 0 0 rgba(39, 151, 255, 0.46);
+            box-shadow: 0 0 rgba(39, 151, 255, 0.46); }
+  to {
+    border-color: rgba(39, 151, 255, 0);
+    border-width: 0px;
+    -webkit-box-shadow: 0 0 0 8px rgba(39, 151, 255, 0);
+            box-shadow: 0 0 0 8px rgba(39, 151, 255, 0); } }
 
 .word {
   font-size: 0;
