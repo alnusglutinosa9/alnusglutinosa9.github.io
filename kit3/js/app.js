@@ -10715,11 +10715,9 @@ var accordeon = __webpack_require__(5);
 
 (0, _jquery2.default)(document).ready(function () {
 
-	(0, _jquery2.default)(window).on('load', function () {
-		setTimeout(function () {
-			(0, _jquery2.default)('body').addClass('is-load');
-		}, 500);
-	});
+	setTimeout(function () {
+		(0, _jquery2.default)('body').addClass('is-load');
+	}, 500);
 
 	var canvas = document.getElementById('canvas');
 	var canvasFun = document.querySelectorAll('.canvas-fun');
