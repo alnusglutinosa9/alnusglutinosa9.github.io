@@ -986,11 +986,13 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .social-list__item:not(:last-child) {
-    margin-right: 8px; }
-    @media screen and (min-width: 768px) {
-      .social-list__item:not(:last-child) {
-        margin-right: 16px; } }
+  .social-list__item {
+    color: rgba(255, 255, 255, 0.5); }
+    .social-list__item:not(:last-child) {
+      margin-right: 8px; }
+      @media screen and (min-width: 768px) {
+        .social-list__item:not(:last-child) {
+          margin-right: 16px; } }
   .social-list__link {
     display: block;
     width: 20px;
@@ -1001,7 +1003,7 @@ canvas {
         height: 30px; } }
     @media (hover: hover) and (pointer: fine) {
       .social-list__link:hover svg {
-        color: rgba(255, 255, 255, 0.5); } }
+        color: #fff; } }
     .social-list__link:active svg, .social-list__link:focus svg {
       opacity: 0.8;
       outline: none;
@@ -1027,7 +1029,7 @@ canvas {
     font-weight: 900;
     font-size: 14px;
     line-height: 16px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     -webkit-transition: color 0.3s ease-in;
     transition: color 0.3s ease-in; }
@@ -1037,14 +1039,14 @@ canvas {
         line-height: 19px; } }
     @media (hover: hover) and (pointer: fine) {
       .language-list__link:hover {
-        color: rgba(255, 255, 255, 0.5);
+        color: #fff;
         cursor: pointer; } }
     .language-list__link:active, .language-list__link:focus {
       opacity: 0.8;
       outline: none;
       border: 0; }
     .language-list__link.is-active {
-      color: rgba(255, 255, 255, 0.5); }
+      color: #fff; }
 
 .btn-round {
   position: relative;
@@ -1094,8 +1096,6 @@ canvas {
         font-size: 40px; }
       .btn-round:hover .btn-round__letter {
         display: inline-block;
-        -webkit-animation: shrinkjumpLetter 1s ease-out;
-                animation: shrinkjumpLetter 1s ease-out;
         -webkit-transform-origin: bottom center;
                 transform-origin: bottom center; }
       .btn-round:hover .btn-round__wrap {
