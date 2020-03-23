@@ -1827,11 +1827,17 @@ canvas {
     margin-left: 0;
     height: auto;
     -o-object-fit: contain;
-       object-fit: contain; }
+       object-fit: contain;
+    position: relative;
+    margin-top: -10%; }
+    @media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (orientation: landscape) {
+      .fun .canvas-fun {
+        margin-top: 0; } }
     @media screen and (min-width: 1024px) {
       .fun .canvas-fun {
         width: auto;
-        max-width: 100%; } }
+        max-width: 100%;
+        margin-top: 0; } }
     .fun .canvas-fun:hover {
       cursor: pointer; }
   .fun__container {
