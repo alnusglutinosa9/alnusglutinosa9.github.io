@@ -666,10 +666,15 @@ canvas {
     margin-right: 0;
     margin-left: 0;
     -o-object-fit: contain;
-       object-fit: contain; }
+       object-fit: contain;
+    position: relative;
+    bottom: -14%;
+    max-width: 85%;
+    margin-right: auto;
+    margin-left: auto; }
     @media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (orientation: landscape) {
       .hero .canvas-main {
-        max-width: 100%; } }
+        max-width: 85%; } }
     @media screen and (min-width: 1024px) {
       .hero .canvas-main {
         width: auto;
