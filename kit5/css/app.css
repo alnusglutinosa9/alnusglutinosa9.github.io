@@ -668,13 +668,13 @@ canvas {
     -o-object-fit: contain;
        object-fit: contain;
     position: relative;
-    bottom: -14%;
     max-width: 85%;
     margin-right: auto;
     margin-left: auto; }
     @media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (orientation: landscape) {
       .hero .canvas-main {
-        max-width: 85%; } }
+        max-width: 85%;
+        bottom: auto; } }
     @media screen and (min-width: 1024px) {
       .hero .canvas-main {
         width: auto;
@@ -901,18 +901,18 @@ canvas {
     @media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (orientation: landscape) {
       .hero__canvas {
         position: absolute;
-        top: 50%;
+        top: 19%;
         left: 76%;
         -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         z-index: 0;
         width: 320px !important;
         height: 320px !important;
         -o-object-fit: contain;
-           object-fit: contain; } }
+        object-fit: contain; } }
     @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
       .hero__canvas {
-        top: 50%; } }
+        top: 17%; } }
     @media screen and (min-width: 1024px) {
       .hero__canvas {
         display: -webkit-box;
@@ -965,12 +965,8 @@ canvas {
         height: 600px; } }
     @media screen and (min-device-width: 320px) and (max-device-width: 1023px) and (orientation: landscape) {
       .hero__video {
-        top: -34px;
         width: 250px;
         height: 250px; } }
-    @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-      .hero__video {
-        top: -34px; } }
     @media screen and (min-width: 1360px) {
       .hero__video {
         -webkit-transform: translate(-50%, -11%);
