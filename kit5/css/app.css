@@ -889,7 +889,7 @@ canvas {
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
     width: 100%;
-    height: auto;
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
     z-index: 0; }
@@ -918,6 +918,7 @@ canvas {
                 align-items: center;
         position: absolute;
         top: 50%;
+        height: auto;
         right: auto;
         left: 70%;
         -webkit-transform: translate(-50%, -50%);
@@ -936,7 +937,7 @@ canvas {
     position: absolute;
     top: auto;
     left: 50%;
-    bottom: -9%;
+    bottom: -15px;
     right: 0;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
